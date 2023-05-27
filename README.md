@@ -1,10 +1,8 @@
 An ascii-portrait learning program
 
-One-command compilation: g++ ./main.cpp -o main
+One-command compilation: `g++ ./main.cpp -o main`
 
-Usage:
-        main.exe [flag]
-
+```
 Flags:
     -i, --input
                        Input file name
@@ -23,6 +21,7 @@ Flags:
 
     -d, --debug
                        Debug mode for which program will print further information during running | default: 0
+```
 
 Reference of third-party repos:
 
