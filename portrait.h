@@ -15,7 +15,7 @@ constexpr int ascii_shape[][ascii_shape_size][ascii_shape_size] = {{{0, 0, 0}, {
                                                                    {{0, 0, 1}, {0, 1, 0}, {1, 0, 0}}};
 constexpr char ascii_char[] = {' ', '-', '|', '\\', '/'};
 constexpr int char_num = sizeof(ascii_char);
-float char_threshold;
+inline float char_threshold;
 extern bool debug;
 
 char shape2char(uint8_t *shape_gray)

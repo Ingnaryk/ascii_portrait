@@ -4,13 +4,11 @@
 #include <fstream>
 #include <numeric>
 
-using uint8_t = unsigned char;
-
 constexpr int kernel_size = 3;
 constexpr int kernel_size_half = kernel_size / 2;
 constexpr int default_channels = 3;
-uint8_t *image_source{nullptr};
-int convo_threshold;
+inline uint8_t *image_source{nullptr};
+inline int convo_threshold;
 
 void rgb2gray(uint8_t *__restrict__ input_rgb, uint8_t *__restrict__ output_gray, int width, int height)
 {
