@@ -25,12 +25,12 @@ enum class Flag
     UnsupportedFormat,
     OutputSizeTooLarge
 };
+std::string intput_file, output_size;
+int quality;
 bool debug;
 
 int main(int argc, const char *argv[])
 {
-    std::string intput_file, output_size;
-    int quality;
     argparser::Parser &parser = argparser::init("An ascii-portrait learning program");
     parser.flag(&intput_file, "--input", "-i", "Input file name");
     parser.flag(&output_size, "--output", "-o", "Output portrait's size(widthxheight)", "30x15");
