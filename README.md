@@ -23,7 +23,6 @@ Flags:
                        Debug mode for which program will print further information during running | default: 0
 ```
 
-Reference of third-party repos:
-
+### Reference of third-party repos:
 - http://github.com/nothings/stb
 - https://github.com/YanB25/argparser
