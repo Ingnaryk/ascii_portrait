@@ -37,7 +37,7 @@ int main(int argc, const char *argv[])
     parser.flag(&convo_threshold, "--convo-thres", "-cot", "The threshold of convolution dividing black and white", "55");
     parser.flag(&char_threshold, "--char-thres", "-cht", "The threshold from the image block to a char", "0.04");
     parser.flag(&quality, "--quality", "-q", "The quality of intermediately generated images", "95");
-    parser.flag(&debug, "--debug", "-d", "Debug mode for which program will print further information during running", "0");
+    parser.flag(&debug, "--debug", "-d", "Debug mode for which program will print further runtime information", "0");
     if (!parser.parse(argc, argv))
     {
         parser.print_promt();
