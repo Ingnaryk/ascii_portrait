@@ -1,8 +1,8 @@
-An ascii-portrait learning program
+# An ascii-portrait learning program
 
 One-command compilation: `g++ ./main.cpp -o main`
 
-```
+```plaintext
 Flags:
     -i, --input
                        Input file name
@@ -25,5 +25,5 @@ Flags:
 
 Reference of third-party repos:
 
-- http://github.com/nothings/stb
-- https://github.com/YanB25/argparser
+- <http://github.com/nothings/stb>
+- <https://github.com/YanB25/argparser>
