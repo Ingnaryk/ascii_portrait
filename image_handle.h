@@ -38,7 +38,7 @@ void convolution(uint8_t *__restrict__ input_gray, uint8_t *__restrict__ output_
                     for (int i = -kernel_size_half; i <= kernel_size_half; ++i)
                     {
                         int con_loc = (y + j) * width + (x + i);
-                        rst += (con_loc < 0 ? 0 : (con_loc > width * height ? 0 : input_gray[con_loc])) * kernel_ptr[(j + kernel_size_half) * kernel_size + i + kernel_size_half];
+                        rst += (y + j < 0 || y + j >= height || x + i < 0 || x + i >= width ? 0 : input_gray[con_loc]) * kernel_ptr[(j + kernel_size_half) * kernel_size + i + kernel_size_half];
                     }
                 }
             }
