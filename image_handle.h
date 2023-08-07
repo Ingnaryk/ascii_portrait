@@ -10,7 +10,7 @@ constexpr int default_channels = 3;
 inline uint8_t *image_source{nullptr};
 inline int convo_threshold;
 
-void rgb2gray(uint8_t *__restrict__ input_rgb, uint8_t *__restrict__ output_gray, int width, int height)
+static void rgb2gray(uint8_t *__restrict__ input_rgb, uint8_t *__restrict__ output_gray, int width, int height)
 {
     for (int i = 0; i < width * height; ++i)
     {
@@ -20,7 +20,7 @@ void rgb2gray(uint8_t *__restrict__ input_rgb, uint8_t *__restrict__ output_gray
     }
 }
 
-void convolution(uint8_t *__restrict__ input_gray, uint8_t *__restrict__ output_gray, int width, int height, int8_t *kernels, int kernel_num)
+static void convolution(uint8_t *__restrict__ input_gray, uint8_t *__restrict__ output_gray, int width, int height, int8_t *kernels, int kernel_num)
 {
     if (kernel_size % 2 != 1)
         throw std::invalid_argument{"Kernel size must be odd!"};
@@ -49,7 +49,7 @@ void convolution(uint8_t *__restrict__ input_gray, uint8_t *__restrict__ output_
     }
 }
 
-std::vector<int8_t> read_kernels(const char *file)
+static std::vector<int8_t> read_kernels(const char *file)
 {
     std::ifstream ifs{file};
     if (!ifs.is_open())
@@ -67,7 +67,7 @@ std::vector<int8_t> read_kernels(const char *file)
     return std::move(kernels);
 }
 
-void save_portrait(const char *file, char *portrait, int width, int height)
+static void save_portrait(const char *file, char *portrait, int width, int height)
 {
     std::ofstream ofs{file};
     if (!ofs.is_open())
