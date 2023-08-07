@@ -20,10 +20,10 @@ Flags:
                        The quality of intermediately generated images | default: 95
 
     -d, --debug
-                       Debug mode for which program will print further information during running | default: 0
+                       Debug mode for which program will print further runtime information | default: 0
 ```
 
-Reference of third-party repos:
+## Reference of third-party repos
 
 - <http://github.com/nothings/stb>
 - <https://github.com/YanB25/argparser>
